@@ -1,0 +1,26 @@
+<apex:page controller="mySUBtraction_class">
+    <apex:form >
+    <apex:pageBlock title="My Subtraction App">
+        <apex:pageBlockButtons >
+        <apex:commandButton value="SUB" action="{!sub}"/>
+        </apex:pageBlockButtons>
+        <apex:pageBlockSection title="Mathmatical Operation">
+        <apex:pageBlockSectionItem >
+            <apex:outputLabel > Enter A Value </apex:outputLabel>
+            <apex:inputTextarea value="{!A}"/>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >
+            <apex:outputLabel >Enter B Value</apex:outputLabel>
+                <apex:inputText value="{!B}"/>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >
+            <apex:outputText > Result </apex:outputText>
+                <apex:inputTextarea value="{!Result}"/>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem dataStyle="center">
+            
+            </apex:pageBlockSectionItem>
+        </apex:pageBlockSection>     
+        </apex:pageBlock>
+    </apex:form>  
+</apex:page>

@@ -1,0 +1,9 @@
+<apex:page >
+    <apex:pageBlock title="Salesforce Classic class" >
+          <apex:pageBlockSection title="Lighting Traning">
+              1:Lighting Exprience <br/> <br/>
+              2:Component Development <br/> <br/>
+              3:Application Builder   <br/> <br/> 
+    </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>

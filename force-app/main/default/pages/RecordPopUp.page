@@ -1,0 +1,20 @@
+<apex:page standardController="Account" recordSetVar="arecs" sidebar="false" showHeader="true">
+    <apex:form >
+       <apex:pageBlock title="Records">
+          <apex:pageBlockSection >
+              <apex:pageBlock title="List of Accounts">
+                  <apex:pageBlockTable value="{!arecs}" var="a">
+                      <apex:column >
+                          <apex:commandLink value="{!a.name}">
+                              <apex:param name="AccountID" value="{!a.ID}"/>
+                          </apex:commandLink>
+                      </apex:column>
+                  </apex:pageBlockTable>
+              </apex:pageBlock>
+              <apex:pageBlock title="Account Details">
+                 <apex:detail subject="{!$CurrentPage.parameters.AccountID}"/>
+              </apex:pageBlock>
+          </apex:pageBlockSection>
+       </apex:pageBlock>
+    </apex:form>
+</apex:page>

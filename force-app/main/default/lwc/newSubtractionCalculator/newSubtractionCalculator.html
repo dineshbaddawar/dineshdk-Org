@@ -1,0 +1,11 @@
+<template>
+    
+   <lightning-card  title="Subtraction Calculator ">
+    <lightning-button label="Submit" slot="actions" onclick={handleClick}></lightning-button>
+    <p class="slds-p-horizontal_small"></p>
+
+    <lightning-input type="number" value={FirstNo} name='first' label="Enter First Number" onchange={handleChange}></lightning-input>
+    <lightning-input type="number" value={SecondNo} name='second' label="Enter Second Number" onchange={handleChange}></lightning-input>
+    <p slot="footer"> The Sub is: <b>{sub}</b></p>
+</lightning-card>
+</template>

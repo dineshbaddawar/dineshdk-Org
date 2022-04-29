@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Mass Delete Contact" icon-name="custom:custom5">
+     <div slot="footer">
+     <lightning-button label="Delete Selected Records" variant="brand" onclick={deleteRecords}>
+     </lightning-button>
+     <div>
+         {message}
+     </div>
+     </div>
+     <p class="slds-p-horizontal_small">
+     <lightning-datatable data={contacts.data} columns={columns} key-field="id" onrowselection={prepareSelectedRows}></lightning-datatable>
+     </p>  
+    </lightning-card> 
+</template>

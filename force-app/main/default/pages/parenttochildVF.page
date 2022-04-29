@@ -1,0 +1,28 @@
+<apex:page controller="parenttochildsoql">
+    <apex:form >
+    <apex:pageBlock title="Account and Contacts">
+        <apex:pageBlockButtons >
+        <apex:commandButton value="standard" action="{!standardLookup}"/>
+        <apex:commandButton value="custom" action="{!customLookup}"/>
+        </apex:pageBlockButtons>
+        <apex:pageBlockTable value="{!accs}" var="a" rendered="{!flag1}">
+        <apex:column value="{!a.name}"/>
+        <apex:column value="{!a.industry}"/>
+        <apex:column headerValue="Contacts">
+            <apex:repeat value="{!a.Contacts}" var="b">
+            {!b.lastname}{!b.firstname}
+            </apex:repeat>
+            </apex:column>
+        </apex:pageBlockTable>
+        <apex:pageBlockTable value="{!accs}" var="a" rendered="{!flag2}">
+        <apex:column value="{!a.name}"/>
+        <apex:column value="{!a.industry}"/>
+        <apex:column headerValue="Contacts">
+            <apex:repeat value="{!a.CustomContacts__r}" var="b">
+            {!b.lastname}{!b.firstname}
+            </apex:repeat>
+            </apex:column>
+        </apex:pageBlockTable>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

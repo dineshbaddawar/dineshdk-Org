@@ -1,0 +1,26 @@
+<apex:page title="Tab:Panel" sidebar="false" showHeader="false">
+    <style>
+       .activeTab
+        {
+         background-color:green;
+         color:white;
+         background-image:none
+        }
+       .inactiveTab
+        {
+        background-color:yellow;
+         color:red;
+        background-image:none
+        }
+    </style>
+    <apex:form >
+        <apex:tabPanel selectedTab="name3" id="tabId" activeTabClass="activeTab" inactiveTabClass="inactiveTab">
+            <apex:tab label="Accounts" name="name1" id="one">It is Related To accounts</apex:tab>
+            <apex:tab label="Contacts" name="name2" id="two">It is Related To Contacts</apex:tab>
+            <apex:tab label="Opportunities" name="name3" id="three">It is Related To Opportunities</apex:tab>
+            <apex:tab label="Leads" name="name4" id="four">It is Related To Leads</apex:tab>
+            <apex:tab label="Cases" name="name5" id="five">It is Related To Cases</apex:tab>
+            <apex:tab label="Solutions" name="name6" id="six">It is Related To Solutions</apex:tab>
+        </apex:tabPanel>
+    </apex:form>
+</apex:page>

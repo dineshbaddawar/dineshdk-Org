@@ -1,0 +1,18 @@
+<apex:page standardController="Account" recordSetVar="arecs" renderAs="pdf">
+    <apex:form >
+        <apex:pageBlock title="List of Accounts">
+            <apex:commandButton value="Next" action="{!next}" style="color:blue;"/>
+            <apex:commandButton value="Previous" action="{!previous}" style="color:green;"/>
+            <apex:commandButton value="Last" action="{!last}" style="color:red"/>
+            <apex:commandButton value="First" action="{!first}" style="color:pink;"/>
+        <apex:pageBlockTable value="{!arecs}" var="a">
+            <apex:column value="{!a.name}" style="color:blue;"/> <br/>
+            <apex:column value="{!a.Industry}" style="color:red;"/> <br/>
+            <apex:column value="{!a.type}" style="color:yellow;"/> <br/>
+            <apex:column value="{!a.Annualrevenue}" style="color:green;"/> <br/>
+            <apex:column value="{!a.phone}" style="color:pink;"/> <br/>
+            <apex:column value="{!a.rating}" style="color:violet;"/> <br/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+    </apex:form>
+</apex:page>

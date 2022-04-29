@@ -1,0 +1,8 @@
+<apex:page standardController="Account" >
+  <apex:pageBlock >
+      Blpck1
+  </apex:pageBlock>
+  <apex:pageblock >
+      Block2
+  </apex:pageblock>
+</apex:page>

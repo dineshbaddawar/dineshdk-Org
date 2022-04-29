@@ -1,0 +1,24 @@
+<apex:page controller="Calculation_Class">
+ <apex:form >
+   <apex:pageBlock tabStyle="Lead" id="pb">
+     <apex:pageBlockButtons >
+       <!---reRender :-->
+         <apex:commandButton action="{!add}" value="Add" reRender="pb"/>
+       </apex:pageBlockButtons>
+       <apex:pageBlockSection columns="1" title="Enter Values">
+       <apex:pageBlockSectionItem >
+           <apex:outputLabel >Enter Number 1</apex:outputLabel>
+           <apex:inputText value="{!num1}"/>
+           </apex:pageBlockSectionItem>
+           <apex:pageBlockSectionItem >
+           <apex:outputLabel >Enter Number 2</apex:outputLabel>
+           <apex:inputText value="{!num2}"/>
+           </apex:pageBlockSectionItem>
+       </apex:pageBlockSection>
+       <apex:pageBlockSection title="Result">
+           <apex:outputLabel >Result</apex:outputLabel>
+           <apex:inputText value="{!total}"/>
+       </apex:pageBlockSection>
+     </apex:pageBlock> 
+    </apex:form>   
+</apex:page>

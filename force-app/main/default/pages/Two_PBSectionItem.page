@@ -1,0 +1,12 @@
+<apex:page >
+    <apex:pageBlock title="Salesforce CRM Traning">
+    <apex:pageBlockSection title="Salesforce & Lighting">
+        <apex:pageBlockSectionItem >
+            <b>SalesForce CRM </b> <br/>
+            1:Salesforce CRM <br/>
+            2:Administration <br/>
+            3:Integration
+        </apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>

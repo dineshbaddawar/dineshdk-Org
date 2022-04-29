@@ -1,0 +1,10 @@
+<apex:page >
+    <apex:pageBlock title="IT Traning">
+    <apex:pageBlockSection title="Salesforce and Lighting">
+        <apex:outputLabel > First Name: </apex:outputLabel> <br/>
+        <apex:outputLabel >Last Name: </apex:outputLabel> <br/>
+        <apex:outputLabel >Phone: </apex:outputLabel> <br/>
+        <apex:outputLabel > Address: </apex:outputLabel>
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>

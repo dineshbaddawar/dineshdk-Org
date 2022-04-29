@@ -1,0 +1,142 @@
+<aura:component controller="samplePagerCtrl" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	<aura:attribute name="Accounts" type="Account[]"/> 
+<aura:attribute name="page" type="integer" description="using for store page Number"/>
+<aura:attribute name="pages" type="integer" description="using for store All Pages page Number"/>
+<aura:attribute name="total" type="integer" description="total records count store "/>
+
+    <p class="slds-text-title_caps">
+        Account
+    </p>
+    <div class="slds-p-around--large"   >
+        <aura:iteration items="{!v.Accounts}" var="account" aura:id="accID"  >
+
+            <div class="slds-page-header" style="cursor: pointer;"  data-record="{!idx}" onclick="{!c.sectionOne}" >
+
+                <section class="slds-clearfix" >
+
+                    <div class="slds-float--left ">
+                        <lightning:icon class="slds-show" aura:id="articleOne" iconName="utility:add" size="x-small" alternativeText="Indicates add"/>
+                        <lightning:icon class="slds-hide" aura:id="articleOne" iconName="utility:dash" size="x-small" alternativeText="Indicates dash"/>
+                    </div>
+                    <div class="slds-m-left--large" ><ui:outputText aura:id="Id" value="{!account.Name}"  />
+                        </div>
+
+                </section>
+            </div>
+
+
+            <div class="slds-hide slds-p-around--medium" aura:id="articleOne"  >
+                <table class="slds-table slds-table--bordered slds-table--cell-buffer slds-table--striped slds-max-medium-table--stacked-horizontal"
+                       role="grid">  
+                    <thead >
+                        <tr>
+                            <th class="slds-is-sortable slds-cell-wrap" scope="col">
+                                Account name
+                            </th>
+                           <th class="slds-is-sortable slds-cell-wrap" scope="col">
+                                Contact Name
+                            </th>
+                           
+                            <th class="slds-is-sortable slds-cell-wrap" scope="col">
+                                Contact ID
+                            </th>
+                        </tr>
+                    </thead>     
+                    <tbody>
+                        <aura:iteration items="{!account.Contacts}" var="con"  >
+
+                           <tr class="slds-hint-parent">
+                                <td role="gridcell" class="slds-cell-wrap" data-label="Name">
+                                    {!account.Name}
+                                </td>
+                                <td role="gridcell" class="slds-cell-wrap" data-label="accName">
+                                    {!con.Name}
+                                </td>
+                                
+                                <td role="gridcell" class="slds-cell-wrap" data-label="manuName">
+                                    {!con.Id}
+                                </td> 
+
+                            </tr>
+                         </aura:iteration>           
+                    </tbody>              
+                </table>      
+            </div> 
+            <div class="slds-hide slds-p-around--medium" aura:id="articleOne">
+                <table class="slds-table slds-table--bordered slds-table--cell-buffer slds-table--striped slds-max-medium-table--stacked-horizontal"
+                       role="grid">  
+                    <thead >
+                        <tr>
+                            <th class="slds-is-sortable slds-cell-wrap" scope="col">
+                                Account name
+                            </th>
+                           <th class="slds-is-sortable slds-cell-wrap" scope="col">
+                                Opportunity Name
+                            </th>
+                            <th class="slds-is-sortable slds-cell-wrap" scope="col">
+                                StageName
+                            </th>
+                            <th class="slds-is-sortable slds-cell-wrap" scope="col">
+                                CloseDate
+                            </th>
+                            
+                            <th class="slds-is-sortable slds-cell-wrap" scope="col">
+                                Opportunity ID
+                            </th>
+                        </tr>
+                    </thead>     
+                    <tbody>
+                        <aura:iteration items="{!account.Opportunities}" var="opp">
+
+                           <tr class="slds-hint-parent">
+                                <td role="gridcell" class="slds-cell-wrap" data-label="Name">
+                                    {!account.Name}
+                                </td>
+                                <td role="gridcell" class="slds-cell-wrap" data-label="accName">
+                                    {!opp.Name}
+                                </td>
+                                <td role="gridcell" class="slds-cell-wrap" data-label="prName">
+                                    {!opp.StageName}
+                                </td>
+                                <td role="gridcell" class="slds-cell-wrap" data-label="manuName">
+                                    {!opp.CloseDate}
+                                </td>   
+                               
+                                <td role="gridcell" class="slds-cell-wrap" data-label="manuName">
+                                    {!opp.Id}
+                                </td> 
+
+                            </tr>
+                         </aura:iteration>           
+                    </tbody>              
+                </table>      
+            </div>
+        </aura:iteration>            
+    </div>
+    <!-- FOOTER -->
+    <footer class="slds-card__footer">
+
+        <!-- LAYOUT GRID -->
+        <div class="slds-grid slds-grid_align-spread">
+        <lightning:button disabled="{!v.page == 1}" variant="brand" label="Previous Page" onclick="{! c.navigate }" />            
+            <lightning:button disabled="{!v.page == v.pages}" aura:id="previousPage" variant="brand" label="Next Page" onclick="{! c.navigate }" />
+        </div>
+
+        <p class="slds-align_absolute-center">{!v.total} Accounts • page {!v.page} / {!v.pages}</p>
+        <ui:inputSelect aura:id="recordSize" label="Display Record Per Page: " change="{!c.onSelectChange}">
+            <ui:inputSelectOption text="10" label="10" value="true"/>
+            <ui:inputSelectOption text="20" label="20"/>
+            <ui:inputSelectOption text="40" label="40"/>
+            <ui:inputSelectOption text="60" label="60"/>
+            <ui:inputSelectOption text="80" label="80"/>
+            <ui:inputSelectOption text="100" label="100"/>
+            <ui:inputSelectOption text="120" label="120"/>
+            <ui:inputSelectOption text="140" label="140"/>
+            <ui:inputSelectOption text="160" label="160"/>
+
+        </ui:inputSelect>
+
+      <!-- / LAYOUT GRID -->
+    </footer>
+    <!-- / FOOTER -->              
+</aura:component>

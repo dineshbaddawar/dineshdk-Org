@@ -1,0 +1,26 @@
+<apex:page title="Institute:IT Training">
+     <apex:pageBlock title="Trainings">
+         <apex:pageBlockSection title="Salesforce And Lighting">
+             <apex:pageBlockSectionItem >
+                 <b> Salesforce CRM </b> <br/>
+                 1:Administration  <br/>
+                 2:Development    <br/>
+                 3:Integration   
+             </apex:pageBlockSectionItem>
+          <apex:pageBlockSection title="Cloud Computing">
+               <apex:pageBlockSectionItem >
+                    <b>Cloud Computing</b> <br/>
+                    1:Lightning Experience    <br/>
+                    2:Component Development    <br/>
+                    3:AppBuilder
+              </apex:pageBlockSectionItem>
+
+              <apex:pageBlockSection >
+                  1:CLI   <br/>
+                  2:VS CODE    <br/>
+                  3:TOPICS
+              </apex:pageBlockSection>
+             </apex:pageBlockSection>
+         </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>

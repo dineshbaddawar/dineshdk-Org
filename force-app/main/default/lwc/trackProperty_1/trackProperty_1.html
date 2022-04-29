@@ -1,0 +1,13 @@
+<template>
+   <lightning-card title="Track Property Working">
+    Eneter Name: <div><b>{name}</b></div>
+    <lightning-input  value={name} onchange={handleName}></lightning-input> <br/>
+
+    Eneter Phone: <div><b>{phone}</b></div>
+    <lightning-input value={phone} onchange={handlePhone}></lightning-input>
+
+   </lightning-card>
+
+   Eneter Location: <div><i>{location}</i></div>
+   <lightning-input value={location} onchange={handleLocation}></lightning-input>
+</template>

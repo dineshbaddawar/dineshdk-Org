@@ -1,0 +1,7 @@
+<apex:page controller="actionStatus_class">
+    <apex:form >
+    <apex:outputText value="Watch This Counter:{!count}" id="counter"></apex:outputText>
+    <apex:actionStatus startText="(Incrementing.....)" stopText="(Hey It is Done...)" id="counterStatus"></apex:actionStatus> 
+    <apex:actionPoller action="{!incrementCounter}" reRender="counter" status="counterStatus" interval="5"/>    
+    </apex:form>
+</apex:page>

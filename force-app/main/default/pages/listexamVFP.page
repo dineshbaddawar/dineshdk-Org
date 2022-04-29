@@ -1,0 +1,12 @@
+<apex:page controller="listExample" >
+    <apex:pageBlock title="Names">
+    <apex:pageBlockTable value="{!names}" var="a">
+        <apex:column value="{!a}" style="color:blue;"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+    <apex:pageBlock title="Dinesh">
+    <apex:pageBlockTable value="{!names}" var="a">
+        <apex:column value="{!a}" style="color:blue;"/>
+        </apex:pageBlockTable> 
+    </apex:pageBlock>
+</apex:page>

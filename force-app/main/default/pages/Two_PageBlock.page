@@ -1,0 +1,7 @@
+<apex:page >
+    <apex:pageBlock title="Salesforce Classic class" >
+        1:Administration <br/> <br/>
+        2:Development <br/> <br/>
+        3:Integration <br/>   
+    </apex:pageBlock>
+</apex:page>

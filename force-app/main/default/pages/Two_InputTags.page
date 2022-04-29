@@ -1,0 +1,14 @@
+<apex:page >
+    <apex:form >
+    <apex:pageBlock >
+        <apex:outputLabel >Enter Name: </apex:outputLabel>
+        <apex:inputText maxlength="10"/>
+        <apex:outputLabel >Enter Address:</apex:outputLabel>
+        <apex:inputTextarea rows="5"/>/>
+        <apex:outputLabel >Enter Passward: </apex:outputLabel>
+        <apex:inputSecret maxlength="10"/>
+        <apex:outputLabel >Gender:</apex:outputLabel>
+        <apex:inputCheckbox />
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

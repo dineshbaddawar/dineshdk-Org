@@ -1,0 +1,14 @@
+<template>
+   <!--Pass parameters to an apex method from lwc-->
+
+   <lightning-card  title="Addition Calculator">
+      <lightning-button label="Submit" slot="actions" onclick={handleClick}></lightning-button>
+      <p class="slds-p-horizontal_small"></p>
+
+      <lightning-input type="number" value={fNumber} name='fstNumber' label="Enter First Number" onchange={handleChange}></lightning-input>
+      <lightning-input type="number" value={sNumber} name='scdNumber' label="Enter Second Number" onchange={handleChange}></lightning-input>
+      <p slot="footer"> The Sum is: <b>{sum}</b></p>
+  </lightning-card>
+
+   
+</template>

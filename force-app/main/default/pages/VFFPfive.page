@@ -1,0 +1,8 @@
+<apex:page >
+    <apex:pageBlock title="Global Data">
+        {!$User.LastName} {!$User.FirstName} <br/>
+        {!$Profile.Name} <br/>
+        {!TODAY()} <br/>
+        {!NOW()}
+    </apex:pageBlock>
+</apex:page>

@@ -1,0 +1,13 @@
+<apex:page >
+    <apex:form >
+        <apex:pageBlock title="Select List">
+            <apex:outputLabel > Select Fruit</apex:outputLabel>
+            <apex:selectList size="1" style="color:green;"> 
+                 <apex:selectOption itemLabel="Apple" itemValue="ap"></apex:selectOption>
+                 <apex:selectOption itemLabel="Mango" itemValue="hp"></apex:selectOption>
+                 <apex:selectOption itemLabel="Grapes" itemValue="kp"></apex:selectOption>
+                 <apex:selectOption itemLabel="Banana" itemValue="yp"></apex:selectOption>
+            </apex:selectList>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

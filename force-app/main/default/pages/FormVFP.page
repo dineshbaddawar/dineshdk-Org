@@ -1,0 +1,28 @@
+<apex:page title="Input Tags" >
+   <apex:form >
+       <apex:commandButton value="ClickHere" action="https://www.youtube.com"/>
+       <apex:pageBlock title="Bio Data">
+           <apex:pageBlockButtons location="top">
+               <apex:commandButton value="Click Here" action="https://developer.salesforce.com"/>
+           </apex:pageBlockButtons>
+        <apex:pageBlockSection title="Personal Information">
+              <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Enter Name: </apex:outputLabel>
+                    <apex:inputText maxlength="10" /> 
+            </apex:pageBlockSectionItem> <br/>
+            <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Enter Address </apex:outputLabel>
+                    <apex:inputTextarea rows="3"/> 
+            </apex:pageBlockSectionItem> <br/>
+            <apex:pageBlockSectionItem >
+                 <apex:outputLabel >Enter PWD</apex:outputLabel>
+                 <apex:inputSecret maxlength="5"/>
+            </apex:pageBlockSectionItem> <br/>
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel >Gender</apex:outputLabel>
+                   <apex:inputCheckbox />
+            </apex:pageBlockSectionItem>
+           </apex:pageBlockSection>   
+       </apex:pageBlock>
+    </apex:form>
+</apex:page>

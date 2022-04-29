@@ -1,0 +1,7 @@
+<template>
+    <lightning-card title="Display Data Using Wire for Opportunity" icon-name="custom:custom8">
+        <template for:each={data} for:item="opportunity">
+            <p key={opportunity.id}>{opportunity.Name}, {opportunity.Amount}</p>
+        </template>
+    </lightning-card>
+</template>

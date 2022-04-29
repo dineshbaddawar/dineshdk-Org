@@ -1,0 +1,16 @@
+<aura:component >
+    <aura:attribute name="WholeNumber" type="integer"/>
+     <aura:attribute name="Percentage" type="integer"/>
+    
+    
+    <div class="slds-var-p-around_small">
+        <lightning:input type="number" name="input1" label="Enter a number" value="{!v.WholeNumber}"/>
+        <lightning:input type="number" name="input1" label="Enter a Percentage" value="{!v.Percentage}" formatter="percent-fixed"/>
+    </div>
+    
+    
+    
+    
+    <!--
+-->
+</aura:component>

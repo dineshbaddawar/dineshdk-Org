@@ -1,0 +1,4 @@
+<apex:page standardController="Account" recordSetVar="arecs">
+    <apex:sectionHeader title="Accounts" subtitle="Home" help="https://help.salesforce.com"/>
+    <apex:listViews type="Account"/>
+</apex:page>

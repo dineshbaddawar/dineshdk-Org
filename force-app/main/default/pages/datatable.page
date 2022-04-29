@@ -1,0 +1,11 @@
+<apex:page standardController="Account" recordSetVar="arecs" renderAs="Pdf">
+    <apex:pageBlock title="Data Table">
+    <apex:dataTable value="{!arecs}" var="a">
+        <apex:column value="{!a.name}" headerValue="Name"/> <br/>
+        <apex:column value="{!a.industry}" headerValue="industry"/> <br/>
+        <apex:column value="{!a.rating}" headerValue="rating"/> <br/>
+        <apex:column value="{!a.AnnualRevenue}" headerValue="AnnualRevenue"/> <br/>
+        <apex:column value="{!a.phone}" headerValue="phone"/>
+        </apex:dataTable>
+    </apex:pageBlock>
+</apex:page>

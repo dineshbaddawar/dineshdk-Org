@@ -1,0 +1,31 @@
+<apex:page controller="insertbulkcontactcontroller">
+     <apex:form >
+        <apex:pageBlock >
+             <apex:variable var="i" value="{!0}" id="va"/>
+            <apex:pageBlockTable value="{!con}" var="c" id="pbt">
+                <apex:column headerValue="lastname">
+            <apex:inputField value="{!c.lastname}"/>
+            </apex:column>
+                <apex:column headerValue="firstname">
+            <apex:inputField value="{!c.firstname}"/>
+            </apex:column>
+                 <apex:column headerValue="phone">
+            <apex:inputField value="{!c.phone}"/>
+            </apex:column>
+                 <apex:column headerValue="email">
+            <apex:inputField value="{!c.email}"/>
+            </apex:column>
+                 <apex:column headerValue="action">
+            <apex:commandLink value="remove" action="{!remo}" immediate="true" reRender="va,pbt">
+                <apex:param name="" value="{!i}" assignTo="{!serialno}"/>
+               </apex:commandLink>
+           </apex:column>
+            <!--    <apex:column >
+<apex:variable  var="i" value="{!i+1}"/>
+                </apex:column>     -->
+            </apex:pageBlockTable>
+            <apex:commandButton value="add contact" action="{!add}" immediate="true" reRender="pbt,va"/>
+            <apex:commandButton value="save contact" action="{!sav}" />
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

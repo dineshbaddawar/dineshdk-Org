@@ -1,0 +1,27 @@
+<apex:page controller="AccountRelatedContacts">
+    <apex:form >
+    <apex:sectionHeader title="Accounts & Contcts"/>
+        <apex:pageBlock >
+        <apex:repeat value="{!acc}" var="a">
+            <apex:pageBlockSection title="{!a.name}">
+               <apex:pageBlockTable value="{!a.contacts}" var="con">
+                   <apex:column headerValue="Last Name"> 
+                       <apex:outputText value="{!con.lastname}">
+                       </apex:outputText>
+                   </apex:column>
+                   
+                   <apex:column headerValue="Phone"> 
+                       <apex:outputText value="{!con.phone}"/>
+                   </apex:column>
+                   
+                   <apex:column headerValue="Email"> 
+                       <apex:outputText value="{!con.email}">
+                       </apex:outputText>
+                   </apex:column>  
+                </apex:pageBlockTable>
+                
+            </apex:pageBlockSection>            
+            </apex:repeat>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

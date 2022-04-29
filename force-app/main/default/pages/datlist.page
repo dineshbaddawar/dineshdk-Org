@@ -1,0 +1,7 @@
+<apex:page standardController="account" recordSetVar="arecs" >
+    <apex:pageBlock title="Data List">
+        <apex:dataList value="{!arecs}" var="a" type="oval">
+          <apex:outputText value="{!a.name}"></apex:outputText> 
+        </apex:dataList>
+    </apex:pageBlock>
+</apex:page>

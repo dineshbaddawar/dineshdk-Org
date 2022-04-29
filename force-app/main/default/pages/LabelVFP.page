@@ -1,0 +1,8 @@
+<apex:page >
+    <apex:pageBlock title="Label">
+        <apex:outputLabel >FirstName:</apex:outputLabel> <br/>
+        <apex:outputLabel >LastName:</apex:outputLabel> <br/>
+        <apex:outputLabel >Phone:</apex:outputLabel> <br/>
+        <apex:outputLabel >Address:</apex:outputLabel>
+    </apex:pageBlock>
+</apex:page>

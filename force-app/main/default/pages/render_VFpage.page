@@ -1,0 +1,11 @@
+<apex:page controller="renderApex_class">
+    <apex:form >
+    <apex:pageBlock title="Hide Data">
+        <apex:commandButton value="Show My Data" action="{!showMydata}"/>
+        </apex:pageBlock>
+        <apex:pageBlock title="Showing My Data" rendered="{!myData}">
+            Account Name:<apex:outputText value="{!accRec.Name}"/> <br/> <br/>
+            AccountNumber:<apex:outputText value="{!accRec.accountNumber}"/>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

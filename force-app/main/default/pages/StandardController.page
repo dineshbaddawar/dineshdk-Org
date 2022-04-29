@@ -1,0 +1,26 @@
+<!---In this using Standard Controller we are inserting Contact Record, also if we use pageBlockSection tag then we
+don't need to mention the label because it is automatically give us the label. it is advantage of pageBC.
+
+--->
+<apex:page standardController="Contact" showHeader="true">
+    <h1>
+        Welcome to VisualForce Page.      
+    </h1>  <br/>
+    UserName is: <b>{!$User.LastName} {!$User.FirstName}</b> <br/>
+    
+    <apex:image url="https://i.pinimg.com/474x/77/a9/5b/77a95bc9180c3500222f36e8f920af2b.jpg"/>
+   <apex:form >
+       <apex:pageBlock title="Page Block title">
+       <apex:pageBlockSection title="Page BlockSetion title" columns="3">
+           
+    <apex:inputField value="{!Contact.LastName}"/>
+       <apex:inputField value="{!Contact.FirstName}"/>
+       <apex:inputField value="{!Contact.Phone}"/>
+           </apex:pageBlockSection>
+         </apex:pageBlock>   
+       
+       <apex:commandButton value="Submit" action="{!Save}"/>
+       <apex:commandButton value="Cancel" action="{!Cancel}"/>
+    </apex:form>
+
+</apex:page>

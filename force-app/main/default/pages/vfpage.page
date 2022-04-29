@@ -1,0 +1,29 @@
+<apex:page controller="settergetterapex_class" >
+    <apex:form >
+    <apex:pageBlock title="My Calculation">
+       <apex:pageBlockButtons >
+           <apex:commandButton value="ADD" action="{!add}"/>
+         </apex:pageBlockButtons>
+        <apex:pageBlockSection title="Simplr Operation">
+        <apex:pageBlockSectionItem >
+          <apex:outputLabel >Enter x value </apex:outputLabel> 
+            <apex:inputText value="{!x}"/>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >
+            <apex:outputLabel >Enter y value</apex:outputLabel>
+                <apex:inputText value="{!y}"/>
+            </apex:pageBlockSectionItem>
+   
+            <apex:pageBlockSectionItem >
+          <apex:outputLabel > Result </apex:outputLabel> 
+            <apex:inputText value="{!result}"/>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem dataStyle="center" >
+            You have performedn {!operation} operation of values {! x } and
+                {! y }....Finally Result is {!result}
+            </apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+          
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

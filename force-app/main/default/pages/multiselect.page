@@ -1,0 +1,25 @@
+<apex:page >
+    <apex:form >
+       <apex:pageBlock title="MultiSelect">
+           <apex:outputLabel >Select Values</apex:outputLabel>
+           <apex:selectCheckboxes >
+               <apex:selectOption itemLabel="Apple" itemValue="ap"></apex:selectOption>
+               <apex:selectOption itemLabel="Mango" itemValue="hp"></apex:selectOption>
+               <apex:selectOption itemLabel="Grapes" itemValue="kp"></apex:selectOption>
+               <apex:selectOption itemLabel="Banana" itemValue="yp"></apex:selectOption>
+           </apex:selectCheckboxes>
+           <apex:selectRadio >
+               <apex:selectOption itemLabel="Apple" itemValue="ap"></apex:selectOption>
+               <apex:selectOption itemLabel="Mango" itemValue="hp"></apex:selectOption>
+               <apex:selectOption itemLabel="Grapes" itemValue="kp"></apex:selectOption>
+               <apex:selectOption itemLabel="Banana" itemValue="yp"></apex:selectOption>
+           </apex:selectRadio>
+           <apex:selectList size="4" multiselect="true">
+            <apex:selectOption itemLabel="Apple" itemValue="ap"></apex:selectOption>
+                 <apex:selectOption itemLabel="Mango" itemValue="hp"></apex:selectOption>
+                 <apex:selectOption itemLabel="Grapes" itemValue="kp"></apex:selectOption>
+                 <apex:selectOption itemLabel="Banana" itemValue="yp"></apex:selectOption>
+           </apex:selectList>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

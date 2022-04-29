@@ -1,0 +1,5 @@
+<apex:page >
+    <apex:pageMessage title="Sample Error Message" severity="Warning" strength="1">
+        Please Rectify Immediately
+    </apex:pageMessage>
+</apex:page>

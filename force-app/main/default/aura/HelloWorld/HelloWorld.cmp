@@ -1,0 +1,34 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+     
+    <aura:attribute name="WholeNumber" type="integer"/>
+    <aura:attribute name="Percentage" type="integer"/>
+    <aura:attribute name="Number1" type="integer"/>
+    <aura:attribute name="Number2" type="integer"/>
+    
+    <lightning:card footer="Card Footer" title="Percentage Calculator">
+        <div class="slds-var-p-around_small ">
+            <lightning:input type="number" name="Input 1" label="Enter a Number" value="{!v.WholeNumber}"/>
+            <lightning:input type="number" name="Input 2" label="Enter a Percentage" value="{!v.Percentage}"
+                             formatter="percent-fixed"/>
+            
+        </div>
+        <br/>
+        <br/>
+        <b> {!v.Percentage} Percent of  {!v.WholeNumber} is : {!div(mult(v.WholeNumber, v.Percentage),100)} </b>
+    </lightning:card>
+    
+    <lightning:card footer="Card Footer 1" title="Simple Calculator">
+    <div class="slds-var-p-around_small">
+         <lightning:input type="number" name="Input1" label="Enter a Number" value="{!v.Number1}"/>
+         <lightning:input type="number" name="Input2" label="Enter a Number" value="{!v.Number2}"/>
+        </div>
+        <br/>
+        <br/>
+        <b>Subtraction of two Number is : {!sub(v.Number1,v.Number2)}</b> <br/><br/>
+        <b>Multiplication of two Number is : {!mult(v.Number1,v.Number2)}</b> <br/><br/>
+        <b>Division of two Number is : {!div(v.Number1,v.Number2)}</b> <br/>
+        
+    </lightning:card>
+    
+    
+    </aura:component>

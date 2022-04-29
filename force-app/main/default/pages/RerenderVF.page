@@ -1,0 +1,23 @@
+<apex:page controller="rerender_apexclass">
+    <apex:form >
+    <apex:pageBlock title="X1">
+    
+        OutPutText:<apex:outputText value="{!myData}"/>
+        </apex:pageBlock>
+        <apex:pageBlock title="X2">
+          <apex:commandButton value="Refresh Below Pageblock" action="{!showMydata}" reRender="klmpg"/>
+        </apex:pageBlock>
+         <apex:pageBlock title="X3" id="klmPg">
+            OutPutText:<apex:outputText value="{!myData}"/>
+        </apex:pageBlock>
+         <apex:pageBlock title="X4">
+            OutPutText:<apex:outputText value="{!myData}"/>
+        </apex:pageBlock>
+         <apex:pageBlock title="X5">
+            OutPutText:<apex:outputText value="{!myData}"/>
+        </apex:pageBlock>
+         <apex:pageBlock title="X6">
+            OutPutText:<apex:outputText value="{!myData}"/>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

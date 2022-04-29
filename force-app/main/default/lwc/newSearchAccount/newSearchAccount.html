@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Account Search LWC" icon-name="custom:custom8">
+        <lightning-input type="search" onchange={handleKeyChange} class="slds-m-bott0m_small" label="Search" value="">
+        </lightning-input>
+
+        <template for:each={accountList} for:item="accountObj" for:index="index">
+         <option key={accountObj.Id}>{accountObj.Name}</option>
+        </template>
+    </lightning-card>
+</template>

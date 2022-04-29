@@ -1,0 +1,42 @@
+<template>
+   
+    <lightning-card title="How to display the Contacts based on Account Name in LWC" custom-icon="custom:icon13">
+        <div class="slds slds-p-horizontal_medium">
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_4-of-12 slds-m-bottom_medium">
+
+                    <lightning-Input type="search" placeholder="Search..." value={accountName} name="accountName" class="accountName" onchange={handleChangeAccName}></lightning-input>
+
+                </div>
+                <div class="slds-col slds-size_6-of-12 slds-m-top_medium" style="margin-top: 19px; margin-left:10px;">
+
+                    <lightning-button label="Search Account Name" size="small" variant="brand" onclick={handleAccountSearch} icon-name="utility:search"
+                    icon-position="right"></lightning-button>
+
+                </div>
+            </div>
+            <h2>Account Name  :- <span><strong>{currentAccountName}</strong></span></h2><br/>
+            <h3><strong><span style="color:rgb(219, 170, 170);">{dataNotFound}</span></strong></h3><br/>
+        <table >    
+                <thead>
+                    <tr> 
+                        <th>First Name</th> 
+                        <th>Last Name</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+ 
+                <tbody>
+                    <template for:each={records} for:item="conItem">
+                        <tr key={conItem.Id}>
+                            <td>{conItem.FirstName}</td>
+                            <td>{conItem.LastName}</td>
+                            <td>{conItem.Email}</td>
+                            <td>{conItem.Account.Name}</td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+        </div>
+    </lightning-card>
+</template>
